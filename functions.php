@@ -188,8 +188,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 
 /* ************************************* */ 
-define( 'TWABC_PLUGIN', __FILE__ );
-define( 'TWABC_PLUGIN_BASENAME', plugin_basename( TWABC_PLUGIN ) );
+define( 'CAROUSEL_BASENAME', get_template_directory().'/functions.php' );
 // Advanced Bootstrap Carousel custom post type
 add_action( 'init', 'twabc_post_type');
 function twabc_post_type() {

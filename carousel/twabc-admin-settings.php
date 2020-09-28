@@ -439,7 +439,7 @@ function twabc_settings_link ($links) {
 	array_unshift($links, $settings_link); 
 	return $links; 
 }
-$twabc_plugin = TWABC_PLUGIN_BASENAME; 
+$twabc_plugin = CAROUSEL_BASENAME; 
 add_filter("plugin_action_links_$twabc_plugin", 'twabc_settings_link' );
 
 
