@@ -1,3 +1,7 @@
-body * {
-  font-size: 1.1em;
+.carousel .carousel-control-prev {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+}
+
+.carousel .carousel-control-next {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
 }

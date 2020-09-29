@@ -138,20 +138,17 @@ add_action( 'widgets_init', 'creator_webapp_widgets_init' );
  * Enqueue scripts and styles.
  */
 function creator_webapp_scripts() {
-	wp_enqueue_style( 'creator-webapp-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_enqueue_style( 'bootstrapcdn-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css', array(), _S_VERSION, false );
-	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/bootstrap.css', array(), _S_VERSION, false );
-	wp_enqueue_style( 'style', get_template_directory_uri() . '/css/style.css', array(), _S_VERSION, false );
+	wp_enqueue_style( 'bootstrapcdn-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', array(), _S_VERSION, false );
+  wp_enqueue_style( 'style', get_template_directory_uri() . '/css/style.css', array(), _S_VERSION, false );
 	wp_enqueue_style( 'twabc-1', get_template_directory_uri() . '/css/twabc-advanced.css', array(), _S_VERSION, false );
 	wp_enqueue_style( 'twabc-3', get_template_directory_uri() . '/css/twabc-advanced-3.css', array(), _S_VERSION, false );
 	wp_enqueue_style( 'twabc-4', get_template_directory_uri() . '/css/twabc-advanced-4.css', array(), _S_VERSION, false );
 	wp_style_add_data( 'creator-webapp-style', 'rtl', 'replace' );
 
   wp_enqueue_script( 'jquery-script', get_template_directory_uri() . '/js/jquery.js', array(), _S_VERSION, false );
-	wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/js/bootstrap.js', array(), _S_VERSION, false );
-	wp_enqueue_script( 'creator-webapp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'googleapis-script', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', array(), _S_VERSION, false );
-	wp_enqueue_script( 'bootstrapcdn-script', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js', array(), _S_VERSION, false );
+	wp_enqueue_script( 'jquery-script', 'https://code.jquery.com/jquery-3.5.1.slim.min.js', array(), _S_VERSION, false );
+	wp_enqueue_script( 'jsdelivr-script', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js', array(), _S_VERSION, false );
+	wp_enqueue_script( 'bootstrapcdn-script', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', array(), _S_VERSION, false );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

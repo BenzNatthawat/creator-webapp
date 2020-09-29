@@ -58,9 +58,9 @@ function twabc_frontend($atts){
 	if(count($images) > 0){
 		ob_start();
 		?>
-		<div id="twabc_<?php echo $id; ?>" class="carousel slide <?php if($atts['effect'] === 'fade') {echo "carousel-fade"; } else if($atts['effect'] === 'vslide') {echo "vertical-slider"; } ?> <?php if($atts['showindicator'] === 'numbered') {echo "carousel-indicator-numbered"; } ?>" <?php if($atts['use_javascript_animation'] == '0'){ echo ' data-ride="carousel"'; } ?> data-interval="<?php echo $atts['interval']; ?>">
-			
-			<?php 
+		<div id="carousel_<?php echo $id; ?>" class="carousel slide <?php if($atts['effect'] === 'fade') {echo "carousel-fade"; } else if($atts['effect'] === 'vslide') {echo "vertical-slider"; } ?> <?php if($atts['showindicator'] === 'numbered') {echo "carousel-indicator-numbered"; } ?>" <?php if($atts['use_javascript_animation'] == '0'){ echo ' data-ride="carousel"'; } ?> data-interval="<?php echo $atts['interval']; ?>">
+
+      <?php 
 			if($atts['twbs'] == '3'){ 
 				require_once('twabc-front-view-3.php');
 			}
@@ -75,7 +75,7 @@ function twabc_frontend($atts){
         if($atts['use_javascript_animation'] == '1'){ ?>
 		<script type="text/javascript">
 			jQuery(document).ready(function() {
-				jQuery('#twabc_<?php echo $id; ?>').carousel({
+				jQuery('#carousel_<?php echo $id; ?>').carousel({
 					interval: <?php echo $atts['interval']; ?>
 				});
 			});
