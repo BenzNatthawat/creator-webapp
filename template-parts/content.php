@@ -20,14 +20,14 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				underscores_posted_on();
-				underscores_posted_by();
+				creator_webapp_posted_on();
+				creator_webapp_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php underscores_post_thumbnail(); ?>
+	<?php creator_webapp_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -35,7 +35,7 @@
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'underscores' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'creator-webapp' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -48,7 +48,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'underscores' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'creator-webapp' ),
 				'after'  => '</div>',
 			)
 		);
@@ -56,6 +56,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php underscores_entry_footer(); ?>
+		<?php creator_webapp_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

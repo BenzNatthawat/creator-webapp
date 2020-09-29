@@ -1,6 +1,6 @@
 <?php
 /**
- * underscores functions and definitions
+ * creator-webapp functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  */
@@ -10,7 +10,7 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
-if ( ! function_exists( 'underscores_setup' ) ) :
+if ( ! function_exists( 'creator_webapp_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -18,14 +18,14 @@ if ( ! function_exists( 'underscores_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function underscores_setup() {
+	function creator_webapp_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on underscores, use a find and replace
-		 * to change 'underscores' to the name of your theme in all the template files.
+		 * If you're building a theme based on creator-webapp, use a find and replace
+		 * to change 'creator-webapp' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'underscores', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'creator-webapp', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -48,7 +48,7 @@ if ( ! function_exists( 'underscores_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'underscores' ),
+				'menu-1' => esc_html__( 'Primary', 'creator-webapp' ),
 			)
 		);
 
@@ -73,7 +73,7 @@ if ( ! function_exists( 'underscores_setup' ) ) :
 		add_theme_support(
 			'custom-background',
 			apply_filters(
-				'underscores_custom_background_args',
+				'creator_webapp_custom_background_args',
 				array(
 					'default-color' => 'ffffff',
 					'default-image' => '',
@@ -100,7 +100,7 @@ if ( ! function_exists( 'underscores_setup' ) ) :
 		);
 	}
 endif;
-add_action( 'after_setup_theme', 'underscores_setup' );
+add_action( 'after_setup_theme', 'creator_webapp_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -109,22 +109,22 @@ add_action( 'after_setup_theme', 'underscores_setup' );
  *
  * @global int $content_width
  */
-function underscores_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'underscores_content_width', 640 );
+function creator_webapp_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'creator_webapp_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'underscores_content_width', 0 );
+add_action( 'after_setup_theme', 'creator_webapp_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function underscores_widgets_init() {
+function creator_webapp_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'underscores' ),
+			'name'          => esc_html__( 'Sidebar', 'creator-webapp' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'underscores' ),
+			'description'   => esc_html__( 'Add widgets here.', 'creator-webapp' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -132,24 +132,24 @@ function underscores_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'underscores_widgets_init' );
+add_action( 'widgets_init', 'creator_webapp_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function underscores_scripts() {
-	wp_enqueue_style( 'underscores-style', get_stylesheet_uri(), array(), _S_VERSION );
+function creator_webapp_scripts() {
+	wp_enqueue_style( 'creator-webapp-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style( 'bootstrapcdn-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css', array(), _S_VERSION, false );
 	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/bootstrap.css', array(), _S_VERSION, false );
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/css/style.css', array(), _S_VERSION, false );
 	wp_enqueue_style( 'twabc-1', get_template_directory_uri() . '/css/twabc-advanced.css', array(), _S_VERSION, false );
 	wp_enqueue_style( 'twabc-3', get_template_directory_uri() . '/css/twabc-advanced-3.css', array(), _S_VERSION, false );
 	wp_enqueue_style( 'twabc-4', get_template_directory_uri() . '/css/twabc-advanced-4.css', array(), _S_VERSION, false );
-	wp_style_add_data( 'underscores-style', 'rtl', 'replace' );
+	wp_style_add_data( 'creator-webapp-style', 'rtl', 'replace' );
 
   wp_enqueue_script( 'jquery-script', get_template_directory_uri() . '/js/jquery.js', array(), _S_VERSION, false );
 	wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/js/bootstrap.js', array(), _S_VERSION, false );
-	wp_enqueue_script( 'underscores-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'creator-webapp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'googleapis-script', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', array(), _S_VERSION, false );
 	wp_enqueue_script( 'bootstrapcdn-script', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js', array(), _S_VERSION, false );
 
@@ -157,7 +157,7 @@ function underscores_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'underscores_scripts' );
+add_action( 'wp_enqueue_scripts', 'creator_webapp_scripts' );
 
 /**
  * Implement the Custom Header feature.

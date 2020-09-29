@@ -12,7 +12,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php underscores_post_thumbnail(); ?>
+	<?php creator_webapp_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -20,7 +20,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'underscores' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'creator-webapp' ),
 				'after'  => '</div>',
 			)
 		);
@@ -34,7 +34,7 @@
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'underscores' ),
+						__( 'Edit <span class="screen-reader-text">%s</span>', 'creator-webapp' ),
 						array(
 							'span' => array(
 								'class' => array(),
