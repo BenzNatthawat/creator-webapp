@@ -57,13 +57,19 @@ header img {
   background: linear-gradient(to left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
 }
 
-header.site-header {
-  background-color: rgba(114, 74, 15, 0.8);
+nav {
+  background-color: rgb(176 125 28);
+  background: linear-gradient(to bottom, rgb(176 125 28), rgb(251 218 126));
 }
 
+nav .logo-a {
+  position: absolute;
+  top: 5px;
+}
 
-nav {
-  background-color: #724B0F;
+nav ul {
+  width: 100%;
+  justify-content: flex-end;
 }
 
 .nav-link {

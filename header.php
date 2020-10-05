@@ -19,30 +19,28 @@
 
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
-  <header id="masthead" class="site-header">
-    <div class="container">
-      <?php 
-        $logo = get_theme_mod( 'custom_logo' );
-        $image = wp_get_attachment_image_src( $logo , 'full' );
-        $image_url = $image[0];
-      ?>
-      <a href="<?php echo home_url() ?>">
-        <img width='100' src="<?php echo $image_url ?>" class="site-logo" alt="Logo" />
-      </a>
-    </div>
-  </header>
 
   <nav id='navbar' class="navbar navbar-expand-lg sticky-top">
     <div class="container">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <?php 
+        $logo = get_theme_mod( 'custom_logo' );
+        $image = wp_get_attachment_image_src( $logo , 'full' );
+        $image_url = $image[0];
+      ?>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <a class='logo-a' href="<?php echo home_url() ?>">
+    <img width='100' src="<?php echo $image_url ?>" class="site-logo" alt="Logo" />
+  </a>
         <?php
           wp_nav_menu(
             array(
               'theme_location'  =>  'menu-1',
-              'menu_class'      =>  'nav justify-content-end',
+              'menu_class'      =>  'nav',
               'container'       =>  'ul',
             )
           );

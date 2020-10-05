@@ -150,7 +150,7 @@ function creator_webapp_scripts() {
 	wp_enqueue_script( 'jquery-script', 'https://code.jquery.com/jquery-3.5.1.slim.min.js', array(), _S_VERSION, false );
 	wp_enqueue_script( 'jsdelivr-script', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js', array(), _S_VERSION, false );
 	wp_enqueue_script( 'bootstrapcdn-script', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', array(), _S_VERSION, false );
-
+	wp_enqueue_script( 'bootstrapcdn-script', 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false', array(), _S_VERSION, false );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
