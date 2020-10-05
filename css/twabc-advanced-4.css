@@ -22,7 +22,7 @@
 }
 /*Zoom In Effect*/
 
-./*vertical-slider .carousel-item-next.carousel-item-left,
+/*.vertical-slider .carousel-item-next.carousel-item-left,
 .vertical-slider .carousel-item-prev.carousel-item-right {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
@@ -39,7 +39,6 @@
 -webkit-transform: translate3d(0,-100%, 0);
         transform: translate3d(0,-100%, 0);
 }*/
-
 
 .vertical-slider .carousel-inner {
   height: 100%;

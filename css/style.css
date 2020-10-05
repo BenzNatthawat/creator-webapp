@@ -97,6 +97,15 @@ main.site-main>div {
 
 .footer-infomation {
   background-color: rgba(251, 218, 126, 1);
+  padding: 30px;
+}
+
+.footer-infomation .col:nth-child(2) {
+  padding-bottom: 5px;
+}
+
+.footer-infomation img {
+  height: 22em;
 }
 
 footer.site-footer>div {
