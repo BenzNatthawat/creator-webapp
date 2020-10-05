@@ -49,6 +49,18 @@ header img {
   margin: 2px;
 }
 
+.carousel-bg {
+  background-image: linear-gradient(140deg, #EADEDB 0%, #BC70A4 50%, #BFD641 75%);
+}
+
+.carousel-bg>div {
+  padding: 40px;
+}
+
+.carousel-inner img {
+  width: 100%;
+}
+
 .carousel .carousel-control-prev {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
 }
@@ -58,8 +70,8 @@ header img {
 }
 
 nav {
-  background-color: rgb(176 125 28);
-  background: linear-gradient(to bottom, rgb(176 125 28), rgb(251 218 126));
+  background-color: rgb(176, 125, 28);
+  background: linear-gradient(to bottom, rgba(176, 125, 28, 1), rgba(251, 218, 126, 1));
 }
 
 nav .logo-a {
@@ -83,10 +95,15 @@ main.site-main>div {
   padding: 50px 20px;
 }
 
+.footer-infomation {
+  background-color: rgba(251, 218, 126, 1);
+}
+
 footer.site-footer>div {
   padding: 20px;
   text-align: center;
-  background-color: #724B0F;
+  background-color: rgb(176, 125, 28);
+  background: linear-gradient(to top, rgba(176, 125, 28, 1), rgba(251, 218, 126, 1));
 }
 
 img {

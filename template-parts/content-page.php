@@ -13,8 +13,6 @@
       <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
     </header><!-- .entry-header -->
 
-    <?php creator_webapp_post_thumbnail(); ?>
-
     <div class="entry-content">
       <?php
       the_content();
@@ -52,3 +50,7 @@
     <?php endif; ?>
   </article><!-- #post-<?php the_ID(); ?> -->
 </div>
+
+    <?php 
+    // creator_webapp_post_thumbnail();
+    ?>

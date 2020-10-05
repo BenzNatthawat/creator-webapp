@@ -12,11 +12,16 @@
 
 get_header();
 ?>
-  <?php echo do_shortcode('[twabc-carousel]'); ?>
+  <div class='carousel-bg'>
+    <div class="container">
+      <?php echo do_shortcode('[twabc-carousel]'); ?>
+    </div>
+  </div>
+
 	<main id="primary" class="site-main">
   
   <div class="container">
-
+    
 		<?php
 		if ( have_posts() ) :
 
