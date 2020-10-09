@@ -63,15 +63,5 @@
 </footer><!-- #colophon -->
 
 <?php wp_footer(); ?>
-        
-<script>
-  var map;
-  function initMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: 13.847860, lng: 100.604274},
-      zoom: 11
-    });
-  }
-</script>
 </body>
 </html>

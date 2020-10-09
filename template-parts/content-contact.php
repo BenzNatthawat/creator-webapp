@@ -29,7 +29,6 @@
         </div>
      </main><!-- .site-main -->
   
-     <div id="map"></div>
      <?php get_sidebar( 'content-bottom' ); ?>
   
  </div><!-- .content-area -->
