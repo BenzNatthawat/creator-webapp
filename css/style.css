@@ -49,12 +49,16 @@ header img {
   margin: 2px;
 }
 
+.carousel {
+  border: 14px solid #cfa445;
+}
+
 .carousel-bg {
-  background-image: linear-gradient(140deg, #EADEDB 0%, #BC70A4 50%, #BFD641 75%);
+  background-color: #f2f2f2;
 }
 
 .carousel-bg>div {
-  padding: 40px;
+  padding: 22px 0;
 }
 
 .carousel-inner img {
@@ -71,6 +75,15 @@ header img {
 
 .navbar {
   padding: 0;
+}
+
+@media (max-width: 991px) {
+  nav.navbar>div {
+    justify-content: flex-end !important;
+  }
+  nav.navbar>div>button {
+    margin: 10px;
+  }
 }
 
 nav {
@@ -99,6 +112,11 @@ nav ul {
   transition: background-position .2s ease-in-out, color .2s ease-in-out;
 }
 
+.post-thumbnail img {
+  width: 20px;
+  height: auto;
+}
+
 .nav-link:hover {
   background-position: 0 100%;
   color: #fff;
@@ -119,7 +137,7 @@ main.site-main>div {
 }
 
 .footer-infomation img {
-  height: 22em;
+  width: 100%;
 }
 
 footer.site-footer>div {
