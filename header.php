@@ -47,22 +47,21 @@
 
   <nav id='navbar' class="navbar navbar-expand-lg sticky-top">
     <div class="container">
+      <?php 
+        $logo = get_theme_mod( 'custom_logo' );
+        $image = wp_get_attachment_image_src( $logo , 'full' );
+        $image_url = $image[0];
+      ?>
+      <a class='logo-a' href="<?php echo home_url() ?>">
+        <img src="<?php echo $image_url ?>" class="site-logo" alt="Logo" />
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
         </svg>
       </button>
 
-      <?php 
-        $logo = get_theme_mod( 'custom_logo' );
-        $image = wp_get_attachment_image_src( $logo , 'full' );
-        $image_url = $image[0];
-      ?>
-
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <a class='logo-a' href="<?php echo home_url() ?>">
-          <img width='100' src="<?php echo $image_url ?>" class="site-logo" alt="Logo" />
-        </a>
         <?php
           wp_nav_menu(
             array(
