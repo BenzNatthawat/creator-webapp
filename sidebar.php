@@ -4,12 +4,13 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
-
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-	return;
-}
 ?>
 
-<aside id="secondary" class="widget-area">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-</aside><!-- #secondary -->
+<div class="col col-12 col-sm-12 col-md-4 col-lg-4 sidebar">
+  <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/sidebar.png" class="site-logo" alt="Logo" />
+  <div class="box-content">
+    <aside id="secondary" class="widget-area">
+      <?php dynamic_sidebar( 'sidebar-1' ); ?>
+    </aside><!-- #secondary -->
+  </div>
+</div>
