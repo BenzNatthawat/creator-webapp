@@ -18,7 +18,7 @@ get_header();
     </div>
   </div>
 
-  <?php include('./slider-marquee.php'); ?>
+  <?php include get_template_directory().'./slider-marquee.php';  ?>
 
 	<main id="primary" class="site-main">
     <div class="container">

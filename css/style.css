@@ -200,7 +200,8 @@ img {
   animation-fill-mode: both;
 }
 
-main.site-main {
+main.site-main,
+main.site-contact {
   padding-bottom: 20px;
 }
 
