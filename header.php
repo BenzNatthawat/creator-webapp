@@ -15,9 +15,7 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
   <meta name="google-site-verification" content="PaCh2NRIN-oweaDbGykXvmRm9x_vb1tDJIPowhlduA8" />
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="รับเขียนเว็บโรงแรมเว็บทัวร์เว็บรถเช่าเว็บห้องเช่าเว็บการตลาดเว็บบริษัทใช้งานง่าย สำหรับเพิ่มการเข้าถึงข้อมูลลูกค้าและเพิ่มยอดการขาย" />
-  <meta name="keywords" content="เว็บโรงแรม,เว็บทัวร์,เว็บรถเช่า,เว็บห้องเช่า,รับทำเว็บภูเก็ต,ออกแบบเว็บภูเก็ต,รับเขียนเว็บโรงแรม,รับเขียนเว็บทัวร์,รับเขียนเว็บห้องเช่า" />
+  <meta name="keywords" content="รับออกแบบเว็บไซต์,เว็บโรงแรม,เว็บทัวร์,เว็บรถเช่า,เว็บห้องเช่า,รับทำเว็บภูเก็ต,ออกแบบเว็บภูเก็ต,รับเขียนเว็บโรงแรม,รับเขียนเว็บทัวร์,รับเขียนเว็บห้องเช่า" />
   <meta http-equiv="content-language" content="th" />
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <meta name="revisit-after" content="7 days" />
