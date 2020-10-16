@@ -33,7 +33,7 @@
                     endwhile;
                     ?>
 
-                    <form action="mail.php" method="POST" id="submit-message">
+                    <form id="form-message" onSubmit="return false">
                         <div class="form-group">
                             <label for="name">ชื่อ</label>
                             <input name='name' type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="ชื่อ">
@@ -50,40 +50,20 @@
                             <label for="message">ข้อความ</label>
                             <textarea name='message' class="form-control" id="message" rows="3" placeholder="ข้อความ"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">ส่งข้อความ</button>
+                        
+        <div class="formpart">
+            <span class="errormessage">Error! Please correct marked fields.</span>
+            <span class="successmessage">Email send successfully!</span>
+            <span class="sendingmessage">Sending...</span>
+        </div>
+
+                        <button  id="submit-message" type="submit" class="btn btn-primary">ส่งข้อความ</button>
                     </form>
                 </div>
             </div>
         </div>
      </main><!-- .site-main -->
-  
-     <?php 
-        $mailto = "thebenzzero@gmail.com";
-        $mailSub = "เทส";
-        $mailMsg = "ข้อความทดสอบ";
-        require_once get_template_directory().'/PHPMailer/PHPMailerAutoload.php';
-        $mail = new PHPMailer();
-        $mail->IsSmtp();
-        
-        $mail->SMTPAuth = true;
-        $mail->SMTPSecure = 'tls';
-        $mail->Host = "smtp.creator-webapp.com";
-        $mail->Port = 25; // or 587
-        //$mail ->IsHTML(true);
-        $mail->Username = "admin@creator-webapp.com";
-        $mail->Password = "Sk62j?7q";
-        $mail->SetFrom("admin@creator-webapp.com", "Creator Webapp");
-        $mail->Subject = "=?utf-8?b?".base64_encode($mailSub)."?=";
-        $mail->Body = $mailMsg;
-        $mail->AddAddress($mailto);
-        if(!$mail->Send()){
-          echo "Mail Not Sent";
-        }
-        else{
-          echo "Mail Sent";
-        }
-    ?>
-  
+    
  </div><!-- .content-area -->
   
  <?php get_footer(); ?>
