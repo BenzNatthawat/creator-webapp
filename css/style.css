@@ -127,16 +127,38 @@ nav ul {
   padding: 0;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   main.site-main .row>.col:first-child {
     padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .abuot-box {
+    border-top: rgba(0, 0, 0, 0.2) 2px solid;
+    margin-top: 16px;
+    padding-top: 16px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .abuot-box {
+    text-align: center;
+  }
+
+  .contact-box {
+    border-top: rgba(0, 0, 0, 0.2) 2px solid;
+    margin-top: 16px;
+    padding-top: 16px;
+    text-align: center;
   }
 }
 
 @media screen and (max-width: 720px) {
   li.menu-item {
     width: 100%;
-    text-align: center;
+    text-align: right;
     border-top: rgba(0, 0, 0, 0.2) 2px solid;
   }
 }
@@ -315,6 +337,6 @@ main.site-contact {
 }
 
 header.entry-header {
-  border-bottom:  2px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   margin-bottom: 16px;
 }

@@ -17,6 +17,8 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="keywords" content="รับออกแบบเว็บไซต์,เว็บโรงแรม,เว็บทัวร์,เว็บรถเช่า,เว็บห้องเช่า,รับทำเว็บภูเก็ต,ออกแบบเว็บภูเก็ต,รับเขียนเว็บโรงแรม,รับเขียนเว็บทัวร์,รับเขียนเว็บห้องเช่า" />
   <meta http-equiv="content-language" content="th" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <meta name="revisit-after" content="7 days" />
   <meta name="robots" content="index, follow" />

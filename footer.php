@@ -12,10 +12,10 @@
 <div class='footer-infomation'>
   <div class="container">
     <div class="row">
-      <div class="col-12 col-sm-12 col-lg-3">
+      <div class="col-12 col-sm-5 col-md-6 col-lg-3">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/footer-logo.png" class="site-logo" alt="Logo" />
       </div>
-      <div class="col-12 col-sm-12 col-lg-5">
+      <div class="abuot-box col-12 col-sm-7 col-md-6 col-lg-5">
         <p>
           <b>
             เกี่ยวกับเรา
@@ -27,7 +27,7 @@
           บริการออกแบบเว็บไซต์ภูเก็ตและทั่วประเทศไทย ราคาถูก เว็บไซต์ใช้งานง่าย ออกแบบเว็บทันสมัย และสร้างความมั่นใจ เพิ่มยอดการตลาดและการเข้าถึง 
         </p>
       </div>
-      <div class="col-12 col-sm-12 col-lg-4">
+      <div class="contact-box col-12 col-sm-12 col-md-12 col-lg-4">
         <p>
           <b>
             ข้อมูลการติดต่อ
