@@ -127,7 +127,7 @@ nav ul {
   padding: 0;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 767px) {
   main.site-main .row>.col:first-child {
     padding-right: 20px;
   }
@@ -312,4 +312,9 @@ main.site-contact {
 .sidebar img {
   width: 100%;
   padding-bottom: 20px;
+}
+
+header.entry-header {
+  border-bottom:  2px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 16px;
 }

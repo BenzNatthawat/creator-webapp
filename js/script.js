@@ -18,64 +18,31 @@ $(document).ready(function () {
 
     var formid = $(formtype);
     var emailsend = false;
-
     formid.find("button#submit-message").click(sendemail);
-
-    // function validator() {
-
-    //   var emailcheck = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-    //   var othercheck = /.{4}/;
-    //   var noerror = true;
-
-    //   formid.find(".requiredfield").each(function () {
-
-    //     var fieldname = jQuery(this).attr('name');
-    //     var value = jQuery(this).val();
-
-    //     if (fieldname == "email") {
-    //       if (!emailcheck.test(value)) {
-    //         jQuery(this).addClass("formerror");
-    //         noerror = false;
-    //       } else {
-    //         jQuery(this).removeClass("formerror");
-    //       }
-    //     } else {
-    //       if (!othercheck.test(value)) {
-    //         jQuery(this).addClass("formerror");
-    //         noerror = false;
-    //       } else {
-    //         jQuery(this).removeClass("formerror");
-    //       }
-    //     }
-    //   })
-
-    //   if (!noerror) {
-    //     formid.find(".errormessage").fadeIn();
-    //   }
-
-    //   return noerror;
-    // }
-
+    formid.find(".errormessage").hide();
+    formid.find(".successmessage").hide();
+    formid.find(".sendingmessage").hide();
     function resetform() {
       formid.find("input").each(function () {
-        jQuery(this).val("");
+        $(this).val("");
       })
       formid.find("textarea").val("");
       emailsend = false;
     }
-
     function sendemail() {
       formid.find(".successmessage").hide();
       var phpfile = "";
       if (formtype == "#form-message") {
-        phpfile = "./send.php";
+        phpfile = formid.attr("attr-data") + "/send.php";
       }
       if (!emailsend) {
         emailsend = true;
         console.log(formid.serialize())
         formid.find(".errormessage").hide();
+        formid.find("#submit-message").prop("disabled", true);
         formid.find(".sendingmessage").show();
-        jQuery.post(phpfile, formid.serialize(), function () {
+        $.post(phpfile, formid.serialize(), function () {
+          formid.find("#submit-message").prop("disabled", false);
           formid.find(".sendingmessage").hide();
           formid.find(".successmessage").fadeIn();
           resetform();
