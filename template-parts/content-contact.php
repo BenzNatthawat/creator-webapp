@@ -14,7 +14,7 @@
      <main id="main" class="site-contact" role="main">
         <div class="container">
             <div class="row">
-                <div class="col col-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="col col-12 col-sm-12 col-lg-12">
                     <div class="box-content">
 
                     <?php
@@ -33,7 +33,7 @@
                     endwhile;
                     ?>
 
-                    <div class="col col-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="col col-6 col-sm-6 col-lg-6">
                         <form id="form-message" onSubmit="return false" attr-data="<?php echo get_template_directory_uri() ?>">
                             <div class="form-group">
                                 <label for="name">ชื่อ</label>

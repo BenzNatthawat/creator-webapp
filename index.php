@@ -23,7 +23,7 @@ get_header();
 	<main id="primary" class="site-main">
     <div class="container">
       <div class="row">
-        <div class="col col-12 col-sm-12 col-md-8 col-lg-8">
+        <div class="col col-12 col-sm-12 col-lg-8">
           <div class="box-content">
             <?php
             if ( have_posts() ) :

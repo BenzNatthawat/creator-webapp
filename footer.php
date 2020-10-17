@@ -12,7 +12,7 @@
 <div class='footer-infomation'>
   <div class="container">
     <div class="row">
-      <div class="col-12 col-sm-12 col-md-8 col-lg-3">
+      <div class="col-12 col-sm-12 col-lg-3">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/footer-logo.png" class="site-logo" alt="Logo" />
       </div>
       <div class="col-12 col-sm-12 col-lg-5">
@@ -37,12 +37,12 @@
           cretor-webapp
         </p>
         <p>
-          47/2 ถนน เทพกระษัตรี ตำบลไม้ขาว 
+          ถนนเทพกระษัตรี ตำบลไม้ขาว 
           อำเภอถลาง จังหวัดภูเก็ต 83110
         </p>
         <p>
-          โทรศัพท์ : 087-4746612 <br/>
-          อีเมล์ : cretor-webapp@gamil.com
+          โทรศัพท์ : 08x-xxx-xxxx<br/>
+          อีเมล์ : cretor-webapp@gamil.com<br/>
           อีเมล์ : admin@creator-webapp.com
         </p>
 

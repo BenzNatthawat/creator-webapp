@@ -77,7 +77,7 @@ header img {
   padding: 0;
 }
 
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   nav.navbar>div {
     justify-content: flex-end !important;
   }
@@ -127,13 +127,13 @@ nav ul {
   padding: 0;
 }
 
-@media (min-width: 767px) {
+@media screen and (min-width: 992px) {
   main.site-main .row>.col:first-child {
     padding-right: 20px;
   }
 }
 
-@media (max-width: 720px) {
+@media screen and (max-width: 720px) {
   li.menu-item {
     width: 100%;
     text-align: center;
@@ -141,7 +141,7 @@ nav ul {
   }
 }
 
-@media (max-width: 575px) {
+@media screen and (max-width: 575px) {
   a.logo-a {
     position: absolute;
     left: 10px;
@@ -152,7 +152,7 @@ nav ul {
   }
 }
 
-@media (min-width: 576px) and (max-width: 991px) {
+@media screen and (min-width: 576px) and (max-width: 991px) {
   a.logo-a {
     position: absolute;
     left: 10%;
