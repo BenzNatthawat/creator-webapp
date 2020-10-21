@@ -6,6 +6,7 @@
  */
 
 ?>
+xxxxxx
 <div class="container">
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="entry-header">
@@ -24,6 +25,33 @@
       );
       ?>
     </div><!-- .entry-content -->
+
+<div class="col col-6 col-sm-6 col-lg-6">
+    <form id="form-message" onSubmit="return false" attr-data="<?php echo get_template_directory_uri() ?>">
+        <div class="form-group">
+            <label for="name">ชื่อ</label>
+            <input name='name' type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="ชื่อ">
+        </div>
+        <div class="form-group">
+            <label for="mail">อีเมล</label>
+            <input name='mail' type="email" class="form-control" id="mail" aria-describedby="emailHelp" placeholder="อีเมล">
+        </div>
+        <div class="form-group">
+            <label for="tel">เบอร์โทรศัพท์</label>
+            <input name='tel' type="text" class="form-control" id="tel" placeholder="เบอร์โทรศัพท์">
+        </div>
+        <div class="form-group">
+            <label for="message">ข้อความ</label>
+            <textarea name='message' class="form-control" id="message" rows="3" placeholder="ข้อความ"></textarea>
+        </div>
+        <div class="formpart">
+            <span class="errormessage text-danger">ส่งอีเมลติดต่อผิดพลาด</span>
+            <span class="successmessage text-success">ส่งอีเมลติดต่อสำเร็จ</span>
+            <span class="sendingmessage">กำลังส่งอีเมลติดต่อ</span>
+        </div>
+        <button  id="submit-message" type="submit" class="btn btn-primary">ส่งข้อความ</button>
+    </form>
+</div>
 
     <?php if ( get_edit_post_link() ) : ?>
       <footer class="entry-footer">

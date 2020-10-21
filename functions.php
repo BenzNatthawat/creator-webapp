@@ -249,3 +249,14 @@ add_action( 'after_setup_theme', 'twabc_addImageSupport');
 require_once('carousel/twabc-admin-view.php');
 require_once('carousel/twabc-front-view.php');
 require_once('carousel/twabc-admin-settings.php');
+
+function get_page_by_post_name($post_name, $output = OBJECT, $post_type = 'post' ){
+	global $wpdb;
+	$page = $wpdb->get_var( $wpdb->prepare( "SELECT ID FROM $wpdb->posts WHERE post_title = %s AND post_type= %s", $post_name, $post_type ) );
+
+	if ( $page ) return get_post( $page, $output );
+
+	return null;
+}
+
+add_action('init','get_page_by_post_name');

@@ -13,6 +13,9 @@ $(document).ready(function () {
     addForm('#form-message');
   }
 
+  if ($('.phuketwebsite').length != 0) {
+    $('.phuketwebsite .page .entry-content p')[0].innerText = `${$('.phuketwebsite .page .entry-content p')[0].innerText}`.replace(/{province}/g, 'ภูเก็ต');
+  }
   /* Contact Form */
   function addForm(formtype) {
 
