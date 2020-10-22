@@ -8,40 +8,6 @@
 get_header();
 ?>
 
-
-	<?php 
-		$path = 'phuketwebsite';
-		if(strpos($_SERVER['REQUEST_URI'], $path)) :
-			include('slider-marquee.php');
-	?>
-
-		<main id="primary" class="site-main phuketwebsite">
-			<?php
-					$pagename = get_page_by_title($path);
-					$args = array(
-						'p'         => $pagename->ID, // ID of a page, post, or custom type
-						'post_type' => 'any'
-					);
-					$query = new WP_Query($args);
-					if ( $query->have_posts() ) {
-						while ($query->have_posts()) :
-							$query->the_post();
-				
-							get_template_part( 'template-parts/content', 'page' );
-				
-							// If comments are open or we have at least one comment, load up the comment template.
-							if ( comments_open() || get_comments_number() ) :
-								comments_template();
-							endif;
-						endwhile; // End of the loop.
-					}
-			?>
-		</main><!-- #main -->
-
-	<?php 
-		else :
-	?>
-
 	<main id="primary" class="site-main">
 		<div class="container pt-3">
       <div class="row">
@@ -65,15 +31,11 @@ get_header();
 							</div><!-- .page-content -->
 						</section><!-- .error-404 -->
 
-					</main><!-- #main -->
-				</div>
-			</div>
+          </div>
+        </div>
 
-			<?php 
-					endif;
-			?>
-
-		</div>
-	</div>
+      </div>
+    </div>
+	</main><!-- #main -->
 <?php
 get_footer();

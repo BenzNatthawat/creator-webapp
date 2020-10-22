@@ -12,6 +12,7 @@
 
 get_header();
 ?>
+
   <div class='carousel-bg'>
     <div class="container">
       <?php echo do_shortcode('[twabc-carousel]'); ?>

@@ -14,7 +14,6 @@ get_header();
 ?>
 
   <?php include('slider-marquee.php'); ?>
-
 	<main id="primary" class="site-main">
 		<?php
 		while ( have_posts() ) :

@@ -7,6 +7,10 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
+$text = array("รับทำเว็บภูเก็ต", "ทำเว็บภูเก็ต", "ทำเว็บโรงแรมภูเก็ต");
+foreach ($text as $value) {
+  echo "<a href='/".$value."'>".$value."</a>";
+}
 ?>
 
 <div class='footer-infomation'>
