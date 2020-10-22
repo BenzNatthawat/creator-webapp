@@ -250,51 +250,14 @@ require_once('carousel/twabc-admin-view.php');
 require_once('carousel/twabc-front-view.php');
 require_once('carousel/twabc-admin-settings.php');
 
-function checkArtist() {
-  $page = get_page_by_path($_SERVER['REQUEST_URI'].'/',OBJECT,'artist');
-
-  if($page){
-      header("HTTP/1.1 301 Moved Permanently"); 
-      header("Location: /artist".$_SERVER['REQUEST_URI']);
-  }
-}
-add_action( 'wp', 'checkArtist' );
-
-// function rudr_rewrite_request($query){
- 
-//   $path = 'phuketwebsite';
-// 	$request_uri = urldecode($_SERVER['REQUEST_URI']);
- 
-//   _e( 'My Text', 'my-text-domain' );
-// 	/* for categories */
-// 	if( $request_uri == '/category/Uncategorized/' )
-// 		$query['category_name'] = 'uncategorized';
- 
-// 	/* for pages */
-// 	if( strpos($_SERVER['REQUEST_URI'], $path) ){
-//     _e( 'xxxxxxxxxxxxxxxx', 'my-text-domain' );
-// 		$query['pagename'] = urlencode('contacts');
-// 		unset($query['name']);
-// 	}
- 
-// 	/* for posts */
-// 	if( $request_uri == '/hello-planet/' )
-// 		$query['name'] = 'hello-world';
- 
-// 	/* for tags */
-// 	if( $request_uri == '/tag/WordPress/' )
-// 		$query['tag'] = 'wordpress';
- 
-// 	return $query;
-// }
- 
-// add_filter( 'request', 'rudr_rewrite_request', 9999, 1 );
-
 function roots_title() {
   $path = 'phuketwebsite';
   $lenPath = strlen($path);
   $strpos = strpos($_SERVER['REQUEST_URI'], $path);
-  $text = urldecode(substr($_SERVER['REQUEST_URI'], $strpos + $lenPath + 1));
+	$text = urldecode(substr($_SERVER['REQUEST_URI'], $strpos + $lenPath + 1));
+	if($text === '') {
+		$text = 'รับเขียนเว็บไซต์ภูเก็ต';
+	}
   if ($strpos) {
     $pagename = get_page_by_title($path);
     $args = array(
