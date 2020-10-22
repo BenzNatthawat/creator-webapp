@@ -340,3 +340,8 @@ header.entry-header {
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   margin-bottom: 16px;
 }
+
+.footer-tag .btn {
+  border-radius: 20px;
+  padding: 0.84rem 1.14rem;
+}

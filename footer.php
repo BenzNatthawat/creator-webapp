@@ -6,13 +6,8 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
-
-$text = array("รับทำเว็บภูเก็ต", "ทำเว็บภูเก็ต", "ทำเว็บโรงแรมภูเก็ต");
-foreach ($text as $value) {
-  echo "<a href='/".$value."'>".$value."</a>";
-}
 ?>
-
+<?php include get_template_directory().'./footer-tag.php';  ?>
 <div class='footer-infomation'>
   <div class="container">
     <div class="row">

@@ -140,6 +140,7 @@ add_action( 'widgets_init', 'creator_webapp_widgets_init' );
 function creator_webapp_scripts() {
 	wp_enqueue_style( 'bootstrapcdn-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', array(), _S_VERSION, false );
   wp_enqueue_style( 'style', get_template_directory_uri() . '/css/style.css', array(), _S_VERSION, false );
+  wp_enqueue_style( 'mdb', get_template_directory_uri() . '/css/mdb.css', array(), _S_VERSION, false );
 	wp_enqueue_style( 'twabc-1', get_template_directory_uri() . '/css/twabc-advanced.css', array(), _S_VERSION, false );
 	wp_enqueue_style( 'twabc-3', get_template_directory_uri() . '/css/twabc-advanced-3.css', array(), _S_VERSION, false );
 	wp_enqueue_style( 'twabc-4', get_template_directory_uri() . '/css/twabc-advanced-4.css', array(), _S_VERSION, false );
