@@ -260,7 +260,7 @@ function roots_title() {
 		$text = 'รับเขียนเว็บไซต์ภูเก็ต';
 	}
   if ($strpos) {
-    $pagename = get_page_by_title($path);
+    $pagename = get_page_by_path($path);
     $args = array(
       'p'         => $pagename->ID, // ID of a page, post, or custom type
       'post_type' => 'any'

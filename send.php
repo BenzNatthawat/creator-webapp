@@ -11,6 +11,7 @@
     $mail->SMTPAuth = true;
     $mail->SMTPSecure = 'tls';
     $mail->Host = "smtp.creator-webapp.com";
+    $mail->AddCC('cwa.creatorwebapp@gmail.com', 'cwa');            
     $mail->Port = 25; // or 587
     $mail ->IsHTML(true);
     $mail->Username = "admin@creator-webapp.com";
