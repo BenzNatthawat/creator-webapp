@@ -7,7 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 ?>
-<?php include get_template_directory().'./footer-tag.php';  ?>
+<?php include get_template_directory().'/footer-tag.php';  ?>
 <div class='footer-infomation'>
   <div class="container">
     <div class="row">
