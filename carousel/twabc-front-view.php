@@ -74,8 +74,8 @@ function twabc_frontend($atts){
         <?php // Javascript animation fallback
         if($atts['use_javascript_animation'] == '1'){ ?>
 		<script type="text/javascript">
-			jQuery(document).ready(function() {
-				jQuery('#carousel_<?php echo $id; ?>').carousel({
+			$(document).ready(function() {
+				$('#carousel_<?php echo $id; ?>').carousel({
 					interval: <?php echo $atts['interval']; ?>
 				});
 			});
