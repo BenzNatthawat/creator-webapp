@@ -41,7 +41,7 @@ $(document).ready(function () {
         formid.find(".errormessage").hide();
         formid.find("#submit-message").prop("disabled", true);
         formid.find(".sendingmessage").show();
-        $.get(phpfile, formid.serialize(), function () {
+        $.post(phpfile, formid.serialize(), function () {
           formid.find("#submit-message").prop("disabled", false);
           formid.find(".sendingmessage").hide();
           formid.find(".successmessage").fadeIn();
