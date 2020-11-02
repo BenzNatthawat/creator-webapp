@@ -1,9 +1,9 @@
 <?php 
     $mailto = "thebenzzero@gmail.com";
-    $nameMsg = $_POST["name"];
-    $messageMsg = $_POST["message"];
-    $mailMsg = $_POST["mail"];
-    $telMsg = $_POST["tel"];
+    $nameMsg = $_GET["name"];
+    $messageMsg = $_GET["message"];
+    $mailMsg = $_GET["mail"];
+    $telMsg = $_GET["tel"];
     require_once './PHPMailer/PHPMailerAutoload.php';
     $mail = new PHPMailer();
     $mail->IsSmtp();
