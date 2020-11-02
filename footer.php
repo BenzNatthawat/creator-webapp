@@ -40,13 +40,13 @@
           อำเภอถลาง จังหวัดภูเก็ต 83110
         </p>
         <p>
-          โทรศัพท์ : 08x-xxx-xxxx<br/>
+          โทรศัพท์ : 087-4746-612<br/>
           อีเมล์ : cretor-webapp@gamil.com<br/>
           อีเมล์ : admin@creator-webapp.com
         </p>
 
         <p>
-          Line: cretorwebapp<br/>
+          Line: benz7474<br/>
           Facebook: <a href='https://www.facebook.com/CreatorWebApp-101915021691114'>CretorWebapp</a>
         </p>
       </div>

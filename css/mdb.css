@@ -10603,11 +10603,11 @@ body.scrollable {
 }
 
 .carousel .carousel-control-prev-icon {
-    background-image: url(../img/svg/arrow_left.svg)
+    background-image: url(../images/left-arrow.svg)
 }
 
 .carousel .carousel-control-next-icon {
-    background-image: url(../img/svg/arrow_right.svg)
+    background-image: url(../images/right-arrow.svg)
 }
 
 .carousel .carousel-indicators li {

@@ -15,7 +15,7 @@
     $mail->Port = 25; // or 587
     $mail ->IsHTML(true);
     $mail->Username = "admin@creator-webapp.com";
-    $mail->Password = "Ur8_1v6i";
+    $mail->Password = "nN5fs0_4";
     $mail->SetFrom("admin@creator-webapp.com", "Creator Webapp");
     $mail->Subject = "=?utf-8?b?".base64_encode("ติดต่อโดย: ".$nameMsg)."?=";
     $mail->Body = "
