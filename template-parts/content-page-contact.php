@@ -26,7 +26,12 @@
     </div><!-- .entry-content -->
 
 <div class="row">
-  <div class="col col-6 col-sm-6 col-lg-6">
+
+  <div class="col col-12 col-sm-12 col-lg-6">
+    <img style="width:100%" src="<?php echo get_stylesheet_directory_uri(); ?>/images/contact.png" class="site-logo" alt="Logo" />
+  </div>
+
+  <div class="col col-12 col-sm-12 col-lg-6">
     <form id="form-message" onSubmit="return false" attr-data="<?php echo get_template_directory_uri() ?>">
         <div class="form-group">
             <label for="name">ชื่อ</label>
@@ -51,10 +56,6 @@
         </div>
         <button  id="submit-message" type="submit" class="btn btn-primary">ส่งข้อความ</button>
     </form>
-  </div>
-
-  <div class="col col-6 col-sm-6 col-lg-6">
-    <img style="width:100%" src="<?php echo get_stylesheet_directory_uri(); ?>/images/contact.png" class="site-logo" alt="Logo" />
   </div>
 </div>
 
