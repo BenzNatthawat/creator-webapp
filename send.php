@@ -1,13 +1,13 @@
 <?php 
-    $mailto = "thebenzzero@gmail.com";
+    $mailto = "admin@creator-webapp.com";
     $nameMsg = $_POST["name"];
     $messageMsg = $_POST["message"];
     $mailMsg = $_POST["mail"];
     $telMsg = $_POST["tel"];
-    require_once './PHPMailer/PHPMailerAutoload.php';
+    require_once get_template_directory() . './PHPMailer/PHPMailerAutoload.php';
     $mail = new PHPMailer();
     $mail->IsSmtp();
-    
+
     if($nameMsg && $messageMsg && $mailMsg) {
       $mail->SMTPAuth = true;
       $mail->SMTPSecure = 'tls';
@@ -16,7 +16,7 @@
       $mail->Port = 25; // or 587
       $mail ->IsHTML(true);
       $mail->Username = "admin@creator-webapp.com";
-      $mail->Password = "nN5fs0_4";
+      $mail->Password = "n@6d39Gr";
       $mail->SetFrom("admin@creator-webapp.com", "Creator Webapp");
       $mail->Subject = "=?utf-8?b?".base64_encode("ติดต่อโดย: ".$nameMsg)."?=";
       $mail->Body = "
@@ -27,15 +27,16 @@
           <div><b>ข้อความ: </b>".$messageMsg."</div>
         </html>
       ";
+
       $mail->AddAddress($mailto);
       if(!$mail->Send()){
-        echo "Mail Not Sent";
+        return "Mail_Not_Sent";
       }
       else{
-        echo "Mail Sent";
+        return "Mail_Sent";
       }
     } else {
-        echo "error";
+      return "error";
     }
 ?>
   

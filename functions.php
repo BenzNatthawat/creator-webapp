@@ -274,3 +274,11 @@ function roots_title() {
 }
 add_action( 'init', 'roots_title');
 
+function contact_form() {
+  if ( $_POST['form'] ) {
+    $data = require get_template_directory() . '/send.php';
+    wp_redirect(home_url($_SERVER['REQUEST_URI']."?data=".$data));
+    exit();
+  }
+}
+add_action( 'init', 'contact_form');

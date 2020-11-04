@@ -32,7 +32,8 @@
   </div>
 
   <div class="col col-12 col-sm-12 col-lg-6">
-    <form id="form-message" onSubmit="return false" attr-data="<?php echo get_template_directory_uri() ?>">
+    <form id="form-message" method="POST">
+        <input type="hidden" name="form" value="contact">
         <div class="form-group">
             <label for="name">ชื่อ</label>
             <input name='name' type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="ชื่อ">
@@ -50,9 +51,14 @@
             <textarea name='message' class="form-control" id="message" rows="3" placeholder="ข้อความ"></textarea>
         </div>
         <div class="formpart">
-            <span class="errormessage text-danger">ส่งอีเมลติดต่อผิดพลาด</span>
-            <span class="successmessage text-success">ส่งอีเมลติดต่อสำเร็จ</span>
-            <span class="sendingmessage">กำลังส่งอีเมลติดต่อ</span>
+            <?php 
+              if($_GET['data'] == "Mail_Not_Sent") 
+                echo '<span class="errormessage text-danger">ส่งอีเมลติดต่อผิดพลาด</span>';
+              else if($_GET['data'] == "Mail_Sent") 
+                echo '<span class="successmessage text-success">ส่งอีเมลติดต่อสำเร็จ</span>';
+              else if($_GET['data'] == "error") 
+                echo '<span class="sendingmessage">ส่งอีเมลติดต่อผิดพลาด กรุณาแจ้งแอดมิน</span>';
+            ?>
         </div>
         <button  id="submit-message" type="submit" class="btn btn-primary">ส่งข้อความ</button>
     </form>
