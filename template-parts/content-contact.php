@@ -8,7 +8,7 @@
 ?>
 <?php get_header(); ?>
  
-  <?php include get_template_directory().'../slider-marquee.php';  ?>
+  <?php require __DIR__."/../slider-marquee.php";  ?>
 
  <div id="primary" class="content-area">
      <main id="main" class="site-contact" role="main">

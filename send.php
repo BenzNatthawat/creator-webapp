@@ -4,7 +4,7 @@
     $messageMsg = $_POST["message"];
     $mailMsg = $_POST["mail"];
     $telMsg = $_POST["tel"];
-    require_once get_template_directory() . './PHPMailer/PHPMailerAutoload.php';
+	require __DIR__."/PHPMailer/PHPMailerAutoload.php";
     $mail = new PHPMailer();
     $mail->IsSmtp();
 

@@ -52,12 +52,14 @@
         </div>
         <div class="formpart">
             <?php 
+			      if(!empty($_GET['data'])) {
               if($_GET['data'] == "Mail_Not_Sent") 
                 echo '<span class="errormessage text-danger">ส่งอีเมลติดต่อผิดพลาด</span>';
               else if($_GET['data'] == "Mail_Sent") 
                 echo '<span class="successmessage text-success">ส่งอีเมลติดต่อสำเร็จ</span>';
               else if($_GET['data'] == "error") 
                 echo '<span class="sendingmessage">ส่งอีเมลติดต่อผิดพลาด กรุณาแจ้งแอดมิน</span>';
+			      }
             ?>
         </div>
         <button  id="submit-message" type="submit" class="btn btn-primary">ส่งข้อความ</button>
