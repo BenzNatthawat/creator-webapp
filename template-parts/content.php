@@ -6,7 +6,6 @@
  */
 
 ?>
-
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="entry-header">
       <?php
@@ -46,6 +45,39 @@
       );
       ?>
     </div><!-- .entry-content -->
+
+    <div class="row">
+      <?php 
+      /**
+       * Setup query to show the ‘services' post type with ‘8' posts.
+       * Output the title with an excerpt.
+       */
+      $args = array(  
+        'post_type'       => 'portfolio',
+        'pagination'      => true,
+        'posts_per_page'  => '9',
+        'orderby'         => 'date',
+        'paged'           => $paged,
+        'cat'             => $category_id,
+      );
+      $querys = new WP_Query( $args ); 
+      while($querys->have_posts()) : $querys->the_post();
+      $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
+      ?>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="card">
+            <img class="card-img-top" src="<?php echo $url ?>" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><?php echo get_the_title() ?></h5>
+              <p class="card-text"><?php echo $post->post_content ?></p>
+              <a href="<?php echo get_permalink() ?>" class="btn btn-primary">ชมเว็บไซต์</a>
+            </div>
+          </div>
+        </div>
+      <?php
+      endwhile;
+      ?>
+    </div>
 
     <!-- <footer class="entry-footer"> -->
       <?php 
